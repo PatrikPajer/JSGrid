@@ -15,7 +15,7 @@ $(".container").find(".square").css({"height" : squareSize, "width" : squareSize
 console.log("OK");
 
 $(".square").on("mouseenter", function() {
-  $(this).toggleClass("whited"); 
+  $(this).addClass("whited"); 
 });
 
 
