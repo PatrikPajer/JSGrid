@@ -1,10 +1,23 @@
 $(document).ready(function() {
 
-$(".container").on("click", function() {
+$(".mode").on("click", function() {
 
-for (i=1; i<=15; i++) {
-$(this).append($("<div></div>").addClass("square"));
+var gridSize = 9;
+var squareSize = 480 / gridSize;
+
+for (i=1; i<= gridSize * gridSize; i++) {
+$(".container").append($("<div></div>").addClass("square"));
+$(".container").find(".square").css({"height" : squareSize, "width" : squareSize});
 }
+
+console.log("OK");
+
+$(".square").on("mouseenter", function() {
+  $(this).css("background-color", "white");
 });
 
+
 });
+});
+
+
