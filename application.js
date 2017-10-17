@@ -3,39 +3,41 @@ $(document).ready(function() {
 var gridSize = $("#gridInput").val();
 var squareSize = 480 / gridSize;
 
-let mode = "red";
+let colour = "whited";
 
 var appendSquare = function () {
 $(".container").append($("<div></div>").addClass("square"));
 };
 
-//on click function
-$(".mode").on("click", function() {
-
-$(".container").find(".square").remove();
-
-for (i=1; i<= gridSize * gridSize; i++) {
-appendSquare();
-}
-
-$(".container").find(".square").css({"height" : squareSize, "width" : squareSize});
-
-
-$(".blue_button").on("click", function () {
-mode = "blue";
+$(".red_button").on("click", function() {
+colour = "reded";
 });
 
-$(".red_button").on("click", function () {
-mode = "red";
+$(".white_button").on("click", function() {
+colour = "whited";
 });
-$(".square").on("mouseenter", function() {
-  $(this).addClass("whited"); 
-}); 
+
+$(".random_button").on("click", function() {
+colour = "random";
+});
 
 //on click function
+$(".reset").on("click", function() {
 
+  $(".container").find(".square").remove();
 
-//switch function
+  for (i=1; i<= gridSize * gridSize; i++) {
+      appendSquare();
+    }
+
+  $(".container").find(".square").css({"height" : squareSize, "width" : squareSize});
+
+  $(".square").on("mouseenter", function() {
+
+      $(this).removeClass("whited reded random");
+      $(this).addClass(colour); 
+    }); 
+
 
 });
 
