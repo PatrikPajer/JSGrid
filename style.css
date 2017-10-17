@@ -21,7 +21,33 @@
   height: 100px;
   position: relative;
   border-radius: 5px;
-  margin: auto;
+  margin: 5px;
+  float: left;
+}
+
+.blue_button {
+  background-color: grey;
+  color: blue;
+  font-size: 28px;
+  font-weight: bold;
+  width: 110px;
+  height: 100px;
+  position: relative;
+  border-radius: 5px;
+  margin: 5px;
+  float: left;
+}
+
+.red_button {
+  background-color: grey;
+  color: blue;
+  font-size: 28px;
+  font-weight: bold;
+  width: 110px;
+  height: 100px;
+  position: relative;
+  border-radius: 5px;
+  margin: 5px;
   float: left;
 }
 
@@ -46,4 +72,8 @@ padding: 5px;
 
 .whited {
   background-color: white;
+}
+
+.reded {
+  background-color: red;
 }
